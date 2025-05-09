@@ -30,25 +30,32 @@ In particolare, si è considerata la media dello score Bleu su un insieme di ese
 |-----------| :-----------: |
 |**Pretrained**| 0 |
 |**Finetuned**| 0.3118 |
+
 Per migliorare le capacità del modello rispetto lo score BLEU si è provato ad sfruttare, in fase di inferenza, versioni di in-context learning
+
 |**Prompting**| **Mean Bleu** |
 |-----------| :-----------: |
 |**Zero shot**| 0.3118 |
 |**One shot**| 0.4126 |
 |**Two shot**| 0.3578 |
+
 e da ciò si osserva come l'inserimento di un esempio nel prompt, in inferenza, permetta di migliorare le performance del modello, sebbene aumentando il numero di esempio oltre il singolo esempio fa degradare le performance generali dello stesso.\
 Successivamente si è provato ad aumentare la performance del modello finetuned provando ad usare tecniche di prompting più avanzate come il **role play prompting** e il **self augmented promtping** 
+
 |**Tecnica di prompting**| **Mean Bleu** |
 |-----------| :-----------: |
 |**Role-Play**| 0.2943 |
 |**Self Augmented**| 0.2528 |
+
 ma non si sono osservati miglioramenti significativi nelle performance.\
 Per questo motivo si è provato, infine, a combinare le versioni di in-context e tecniche avanzate di prompting più promettenti per valutare le performance del modello
+
 | Combination              | Mean BLEU |
 | ------------------------ | :---------: |
 | **1-shot & role-play**      | 0.3609|
 | **self-augment & role-play** | 0.1267|
 | **1-shot & self-augment**    | 0.4740|
+
 così facendo si ottiene la migliore combinazioni di tecniche che garantisce le migliori performance in termini di score Bleu.
 
 ## Conclusioni e lavori futuri
