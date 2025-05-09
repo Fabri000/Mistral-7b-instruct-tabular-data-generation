@@ -49,4 +49,7 @@ Per questo motivo si è provato, infine, a combinare le versioni di in-context e
 | **1-shot & role-play**      | 0.3609|
 | **self-augment & role-play** | 0.1267|
 | **1-shot & self-augment**    | 0.4740|
+così facendo si ottiene la migliore combinazioni di tecniche che garantisce le migliori performance in termini di score Bleu.
 
+## Conclusioni e lavori futuri
+Sebbene si sia trovata una combinazioni di tecniche di promptin che massimizzi la metrica bleu rispetto all'utilizzo del solo finetuning del modello, si osserva che il modello ottenuto presenta problemi dal punto di vista del contenuto delle tabelle generate (anche se rispetta la struttura) e ciò richiederebbe ulteriori studi in cui si sfruttano tecniche avanzate per il finetuning o per la valutazione del modello.
